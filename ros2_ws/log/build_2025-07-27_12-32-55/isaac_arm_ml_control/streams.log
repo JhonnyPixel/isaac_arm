@@ -1,0 +1,37 @@
+[0.428s] Invoking command in '/home/francesco/Desktop/tirocinio/ros2_ws/src/isaac_arm_ml_control': PYTHONPATH=/home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/isaac_arm_ml_control build --build-base /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/build install --record /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/install.log --single-version-externally-managed install_data
+[0.588s] running egg_info
+[0.589s] creating ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info
+[0.589s] writing ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/PKG-INFO
+[0.589s] writing dependency_links to ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/dependency_links.txt
+[0.589s] writing entry points to ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/entry_points.txt
+[0.589s] writing requirements to ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/requires.txt
+[0.589s] writing top-level names to ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/top_level.txt
+[0.589s] writing manifest file '../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/SOURCES.txt'
+[0.590s] reading manifest file '../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/SOURCES.txt'
+[0.590s] adding license file 'LICENSE'
+[0.591s] writing manifest file '../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/SOURCES.txt'
+[0.591s] running build
+[0.591s] running build_py
+[0.591s] creating /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/build
+[0.591s] creating /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/build/lib
+[0.591s] creating /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/build/lib/isaac_arm_ml_control
+[0.592s] copying isaac_arm_ml_control/__init__.py -> /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/build/lib/isaac_arm_ml_control
+[0.592s] copying isaac_arm_ml_control/publisher_test.py -> /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/build/lib/isaac_arm_ml_control
+[0.592s] running install
+[0.592s] running install_lib
+[0.592s] creating /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control
+[0.592s] copying /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/build/lib/isaac_arm_ml_control/__init__.py -> /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control
+[0.592s] copying /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/build/lib/isaac_arm_ml_control/publisher_test.py -> /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control
+[0.592s] byte-compiling /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/__init__.py to __init__.cpython-310.pyc
+[0.592s] byte-compiling /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/publisher_test.py to publisher_test.cpython-310.pyc
+[0.593s] running install_data
+[0.593s] creating /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/share/ament_index
+[0.593s] creating /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/share/ament_index/resource_index
+[0.593s] creating /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/share/ament_index/resource_index/packages
+[0.593s] copying resource/isaac_arm_ml_control -> /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/share/ament_index/resource_index/packages
+[0.593s] copying package.xml -> /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/share/isaac_arm_ml_control
+[0.593s] running install_egg_info
+[0.594s] Copying ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info to /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control-0.0.0-py3.10.egg-info
+[0.595s] running install_scripts
+[0.608s] writing list of installed files to '/home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/install.log'
+[0.622s] Invoked command in '/home/francesco/Desktop/tirocinio/ros2_ws/src/isaac_arm_ml_control' returned '0': PYTHONPATH=/home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/isaac_arm_ml_control build --build-base /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/build install --record /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/install.log --single-version-externally-managed install_data

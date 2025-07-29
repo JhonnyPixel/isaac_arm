@@ -1,0 +1,29 @@
+[0.396s] Invoking command in '/home/francesco/Desktop/tirocinio/ros2_ws/src/isaac_arm_ml_control': PYTHONPATH=/home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/isaac_arm_ml_control build --build-base /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/build install --record /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/install.log --single-version-externally-managed install_data
+[0.557s] running egg_info
+[0.557s] writing ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/PKG-INFO
+[0.557s] writing dependency_links to ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/dependency_links.txt
+[0.557s] writing entry points to ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/entry_points.txt
+[0.558s] writing requirements to ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/requires.txt
+[0.558s] writing top-level names to ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/top_level.txt
+[0.559s] reading manifest file '../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/SOURCES.txt'
+[0.560s] adding license file 'LICENSE'
+[0.560s] writing manifest file '../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/SOURCES.txt'
+[0.560s] running build
+[0.560s] running build_py
+[0.561s] copying isaac_arm_ml_control/vrdatapub.py -> /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/build/lib/isaac_arm_ml_control
+[0.561s] running install
+[0.561s] running install_lib
+[0.562s] copying /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/build/lib/isaac_arm_ml_control/vrdatapub.py -> /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control
+[0.562s] byte-compiling /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/vrdatapub.py to vrdatapub.cpython-310.pyc
+[0.563s] running install_data
+[0.563s] running install_egg_info
+[0.564s] removing '/home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control-0.0.0-py3.10.egg-info' (and everything under it)
+[0.564s] Copying ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info to /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control-0.0.0-py3.10.egg-info
+[0.565s] running install_scripts
+[0.578s] Installing iiwa_pub_ml script to /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/isaac_arm_ml_control
+[0.579s] Installing publisher_ml script to /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/isaac_arm_ml_control
+[0.579s] Installing publisher_test script to /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/isaac_arm_ml_control
+[0.579s] Installing realtimepub script to /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/isaac_arm_ml_control
+[0.579s] Installing vrdatapub script to /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/isaac_arm_ml_control
+[0.579s] writing list of installed files to '/home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/install.log'
+[0.592s] Invoked command in '/home/francesco/Desktop/tirocinio/ros2_ws/src/isaac_arm_ml_control' returned '0': PYTHONPATH=/home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/isaac_arm_ml_control build --build-base /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/build install --record /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/install.log --single-version-externally-managed install_data

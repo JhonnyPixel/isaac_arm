@@ -1,0 +1,21 @@
+struttura della tesi:
+
+1. Introduzione alla Cinematica Inversa: Spiega come la cinematica inversa sia efficace per calcolare i giunti da una posizione fissa della mano, specialmente in compiti semplici.
+
+2. Limiti della Cinematica Inversa:
+
+    La cinematica inversa è deterministica, ma non può facilmente adattarsi a comportamenti complessi o ad ambienti dinamici.
+
+    In situazioni più variabili o non previste, la cinematica inversa potrebbe non fornire soluzioni ottimali. Inoltre, se la mano umana non segue un percorso preciso (a causa di piccole variazioni nel gesto), l'IK potrebbe non essere in grado di generalizzare bene.
+
+3. Valore Aggiunto dell'Imitation Learning:
+
+    Il modello di apprendimento per imitazione può imparare da esempi reali di interazione umana, generalizzando a situazioni che non sono facili da modellare tramite IK.
+
+    I modelli AI possono adattarsi a diversi scenari di movimento e comportamenti complessi che non sono facilmente descrivibili da un algoritmo tradizionale.
+
+4. Applicazioni pratiche dell'AI: Mostra che in contesti reali dove ci sono incertezze, variabilità o ambienti dinamici, l'AI può migliorare l'affidabilità e la flessibilità del robot.
+
+
+
+ok. la mia tesi di informatica si svilupper`a su isaac sim la costruzione di un ambiente di simulazione ,ros2,urdf (per rappresentare il robot in laboratorio),la comunicazione tra isaac-sim e ros2, l apprednimento di compiti da parte del robot tramite imitation learning (quindi presentazione degli approcci di learning e motivazioni del perche abbiamo scelto questo), implementazione con pytorch di questo learning e quindi teoria dal punto di vista probabilistico di come funziona. e poi non so boh risultati e misurazioni, grafici generati con python e miglioramenti futuri.

@@ -1,0 +1,10 @@
+
+L approccio scelto `e l'IMITATION LEARNING. in questo approccio un robot impara a imitare un azione attraverso delle dimostrazioni fornite da un esperto.
+
+questo approccio richiede il possesso di un dataset di dati etichettati di allenamento in cui sono presenti le dimostrazioni e gli output desiderati.
+
+
+In questo caso le dimostrazioni saranno effettuate in isaac-sim attraverso il lavoro del mio collega che si `e concentrato sulla parte di registrazione di dati dalla mano, attraverso questi dati della mano e possibile calcolare con grazie alla CINEMATICA INVERSA, la posizione dei giunti desiderata in corrispondenza ad ogni istante.
+
+
+

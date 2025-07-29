@@ -1,0 +1,27 @@
+running egg_info
+writing ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/PKG-INFO
+writing dependency_links to ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/dependency_links.txt
+writing entry points to ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/entry_points.txt
+writing requirements to ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/requires.txt
+writing top-level names to ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/top_level.txt
+reading manifest file '../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/SOURCES.txt'
+adding license file 'LICENSE'
+writing manifest file '../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/SOURCES.txt'
+running build
+running build_py
+copying isaac_arm_ml_control/vrdatapub.py -> /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/build/lib/isaac_arm_ml_control
+running install
+running install_lib
+copying /home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/build/lib/isaac_arm_ml_control/vrdatapub.py -> /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control
+byte-compiling /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/vrdatapub.py to vrdatapub.cpython-310.pyc
+running install_data
+running install_egg_info
+removing '/home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control-0.0.0-py3.10.egg-info' (and everything under it)
+Copying ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info to /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control-0.0.0-py3.10.egg-info
+running install_scripts
+Installing iiwa_pub_ml script to /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/isaac_arm_ml_control
+Installing publisher_ml script to /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/isaac_arm_ml_control
+Installing publisher_test script to /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/isaac_arm_ml_control
+Installing realtimepub script to /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/isaac_arm_ml_control
+Installing vrdatapub script to /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/isaac_arm_ml_control
+writing list of installed files to '/home/francesco/Desktop/tirocinio/ros2_ws/build/isaac_arm_ml_control/install.log'

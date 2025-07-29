@@ -1,0 +1,81 @@
+In machine learning in genere abbiamo diverse macrocategorie di problemi, che richiedono soluzioni e architetture diverse.
+
+- regressione, con questo approccio si cerca di predirre numeri continui da certi input ad esempio:
+
+
+Prevedere la temperatura domani	 (es. 28.5°C)	Regressione
+Prevedere il prezzo di una casa	 (es. 200.000€)	Regressione
+Prevedere la posizione dei giunti robotici (Una lista di numeri) Regressione
+
+
+- classificazione, questo approccio cerca di collocare gli input che arrivano in delle categorie e appunto di classificarli (es. Macchina,Casa o Persona).
+
+
+- Reinforcement learning, questo approccio mira all addestrare una policy (ovvero un comportamento) attraverso un politica di reward che mira a minimizzare una funzione di perdita (LOSS)
+
+
+
+Una rete neurale artificiale è un modello matematico ispirato al cervello umano, progettato per imparare delle relazioni tra input e output.
+
+Una rete neurale è fatta da strati (layers) di neuroni artificiali.
+
+Ogni neurone:
+
+    prende un input numerico,
+
+    lo pesa con un coefficiente,
+
+    aggiunge un bias,
+
+    applica una funzione di attivazione.
+    
+# possiamo avere diversi tipi di strati:
+
+## uno strato lineare (Linear) `e il cuore degli MLP, esegue questa operazione: output = W * input + b
+
+W: matrice dei pesi
+
+b: bias
+
+input: vettore (es. [x, y, z])
+
+output: nuovo vettore
+
+## uno strato di attivazione (funzione di attivazione)
+
+Dopo ogni strato lineare, si applica una non-linearità. Serve a "dare potenza" alla rete per imparare relazioni complesse, non solo lineari.
+
+Le più comuni:
+
+ReLU	max(0, x)	Veloce e stabile
+Sigmoid	valori tra 0 e 1	Per output probabilistici
+Tanh	valori tra -1 e 1	Come sigmoid ma centrata sullo zero
+
+
+Il mio problema e un problema di regressione multivariata (sto cercando di preddire piu numeri continui contemporaneamente).
+
+la rete neurale piu semplice per fare questo `e un MLP (Multi-Layer perceptron) ovvero una rete neurale composta solo da strati lineari + attivazioni messi uno dopo l'altro che mappa input all output.
+
+model = nn.Sequential(
+    nn.Linear(6, 64),   # input: 6 numeri (mano)
+    nn.ReLU(),          # attivazione
+    nn.Linear(64, 64),  # secondo layer
+    nn.ReLU(),
+    nn.Linear(64, 6)    # output: 6 giunti
+)
+
+# Fase di addestramento
+
+nella fase di addestramento si opera in questa maniera:
+
+1 - diamo alla rete un input del dataset
+
+2 - la rete produce un output
+
+3 - confrontiamo l output con il valore reale usando una Loss function (come MSE)
+
+4 - calcoliamo l errore attraverso la funzione di loss
+
+5 - si usa un ottimizzatore per modificare i pesi e migliorare il modello
+
+

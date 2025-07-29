@@ -1,0 +1,8 @@
+[console_scripts]
+iiwa_pub_ml = isaac_arm_ml_control.iiwa_mlnode:main
+publisher_ml = isaac_arm_ml_control.panda_mlnode:main
+publisher_test = isaac_arm_ml_control.publisher_test:main
+realtimepub = isaac_arm_ml_control.realtimepub:main
+realtimepub_claude = isaac_arm_ml_control.realtimepub_claude:main
+vrdatapub = isaac_arm_ml_control.vrdatapub:main
+

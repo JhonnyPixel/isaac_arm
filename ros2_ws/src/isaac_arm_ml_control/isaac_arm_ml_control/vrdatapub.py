@@ -19,7 +19,7 @@ class VRControllerPublisher(Node):
         self.vrsystem = openvr.VRSystem()
         # Choose left or right controller; here we use right hand
         self.controller_index = self._find_controller_index(openvr.TrackedControllerRole_RightHand)
-        self.timer = self.create_timer(0.02, self.timer_callback)  # 50 Hz
+        self.timer = self.create_timer(1, self.timer_callback)  # 50 Hz
         self.get_logger().info(f"Publishing VR controller poses on 'vr/controller_pose'. Controller index: {self.controller_index}")
 
     def _find_controller_index(self, role):

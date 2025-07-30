@@ -10,63 +10,99 @@ import numpy as np
 from visual_kinematics.RobotSerial import RobotSerial
 from visual_kinematics.Frame import Frame
 from scipy.spatial.transform import Rotation as R
+from roboticstoolbox import DHRobot, RevoluteDH, ERobot
+from spatialmath import SE3
 
+def transform_input(x_in, y_in, z_in):
+        # Da frame Isaac Sim a frame robot
+        x_robot = x_in          # Isaac Z → robot X
+        y_robot = -z_in         # Isaac X → robot -Y
+        z_robot = y_in          # Isaac Y → robot Z
+        return x_robot, y_robot, z_robot
+
+def transform_orientation(quat_in):
+    """
+    Converte un quaternion da Isaac Sim frame a robot frame.
+    """
+    r_in = R.from_quat([quat_in.x, quat_in.y, quat_in.z, quat_in.w])
+
+    # Rotazione dal frame Isaac (X: avanti, Y: sinistra, Z: su)
+    # al frame robot (X: destra, Y: avanti, Z: su)
+    # Serve una rotazione di -90° intorno a Z (Isaac) per portare Y (sinistra) su X (destra)
+    R_correction = R.from_euler('z', -90, degrees=True)
+
+    r_out = R_correction * r_in  # applica la rotazione
+    return r_out.as_quat()  # restituisce [x, y, z, w]
+
+
+
+def kuka_iiwa_model():
+    # Definizione dei parametri DH approssimati per KUKA LBR iiwa 7 R800
+    links = [
+        RevoluteDH(d=0.34, a=0, alpha=-np.pi/2),
+        RevoluteDH(d=0,    a=0, alpha=np.pi/2),
+        RevoluteDH(d=0.4,  a=0, alpha=-np.pi/2),
+        RevoluteDH(d=0,    a=0, alpha=np.pi/2),
+        RevoluteDH(d=0.4,  a=0, alpha=-np.pi/2),
+        RevoluteDH(d=0,    a=0, alpha=np.pi/2),
+        RevoluteDH(d=0.126,a=0, alpha=0),
+    ]
+    robot = DHRobot(links, name='KUKA_LBR_iiwa')
+    robot = ERobot.URDF("/home/francesco/Desktop/tirocinio/ros2_ws/urdf/urdf/lbr_iiwa7_r800.urdf")
+    return robot
 
 def cinematic(self,x,y,z,o):
 
-    # 1. Definizione dei parametri DH per il KUKA LBR iiwa 7 R800
-    dh_params = np.array([
-        [0.34, 0., -np.pi / 2, 0.],
-        [0., 0.,  np.pi / 2, 0.],
-        [0.4, 0., -np.pi / 2, 0.],
-        [0., 0.,  np.pi / 2, 0.],
-        [0.4, 0., -np.pi / 2, 0.],
-        [0., 0.,  np.pi / 2, 0.],
-        [0.126, 0., 0., 0.]
-    ])
+    # 1. Crea modello robot
+    robot = kuka_iiwa_model()
 
-    # 2. Creazione del robot
-    robot = RobotSerial(dh_params)
-
-    # 3. Definizione della posa desiderata dell'end-effector
-    xyz = np.array([[x], [y], [z]])  # Posizione in metri
+    # 2. Costruisci matrice di rotazione dal quaternione
+    # Converti l'orientamento
+    quat_corrected = transform_orientation(o)
+    rotation_matrix = R.from_quat(quat_corrected).as_matrix()
     
-    r = R.from_quat([o.x, o.y, o.z, o.w])
-    abc = r.as_euler('xyz') # Orientamento in radianti (ZYX)
-    # 4. Creazione del frame desiderato
-    end = Frame.from_euler_3(abc, xyz)
+    # 3. Costruisci SE3 (pose desiderata)
+    T_target = SE3.Rt(rotation_matrix, [x, y, z])
 
-    # 5. Calcolo della cinematica inversa
-    robot.inverse(end)
+    # 4. Calcolo IK numerico (Levenberg-Marquardt)
+    #sol = robot.ikine_LM(T_target)  # puoi anche provare .ikine_min()
+
+    # 4. Punto iniziale coerente (q0)
+    self.last_q = getattr(self, 'last_q', np.zeros(7))
+    sol = robot.ikine_LM(T_target, q0=self.last_q)
 
     # 6. Verifica se la soluzione è raggiungibile
-    if robot.is_reachable_inverse:
-        print("Soluzione trovata:")
-        print("Valori dei giunti:", robot.axis_values)
+    if sol.success:
+      
 
         # 7. Esportazione dei dati in CSV
-        joint_positions = robot.axis_values.tolist()
-        
-         # Pubblica comando joint
+        joint_positions = sol.q
+
         joint_msg = JointState()
         joint_msg.header.stamp = self.get_clock().now().to_msg()
         joint_msg.name = [
             'joint1', 'joint2', 'joint3',
             'joint4', 'joint5', 'joint6', 'joint7'
         ]
-        joint_msg.position = joint_positions
+        joint_msg.position = [float(j) for j in joint_positions]
 
         self.publisher_.publish(joint_msg)
         
         self.get_logger().info(
-            f"{joint_positions[0]},{joint_positions[1]},{joint_positions[2]},{joint_positions[3]},{joint_positions[4]},{joint_positions[5]},{joint_positions[6]}" 
+            f"Joint values: {', '.join([f'{j:.3f}' for j in joint_positions])}"
         )
         
+        T = robot.fkine(joint_positions)
+        
+        xyz_result = T.t  # oppure T.t.tolist() se vuoi in forma di lista
+        self.get_logger().info(f"Posizione effettiva (FK): {xyz_result}")
         return True
 
     else:
-        print("La posizione desiderata non è raggiungibile.")
-        return False
+    
+	    self.get_logger().info(f"Posizione non raggiungibile")
+	    return False
+
 
 
 class VRDataLogger(Node):
@@ -95,6 +131,14 @@ class VRDataLogger(Node):
         p = pose_msg.pose.position
         o = pose_msg.pose.orientation
 
+        # Orientamento fisso (quaternion unitario)
+        #class o:
+        #    x = 0.0
+        #    y = 0.0
+        #    z = 0.0
+        #    w = 1.0
+
+        
         # extract grip
         grip = grip_msg.data
 
@@ -104,12 +148,7 @@ class VRDataLogger(Node):
             f"ori=({o.x:.3f},{o.y:.3f},{o.z:.3f},{o.w:.3f}) | grip={grip:.3f}"
         )
 
-        x_robot = p.z
-        y_robot = -p.x
-        z_robot = p.y
-        
-        
-	    # cambiamo le coordinate in base al sistema di riferimento adottato da isaac sim Z su, X avanti.
+        x_robot, y_robot, z_robot = transform_input(p.x, p.y, p.z)
 
         # calculate inverse kinematic and publish joints
         cinematic(self,x_robot,y_robot,z_robot,o)

@@ -1,3 +1,4 @@
+/home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/manual_joint_command.py
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/realtimepub.py
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/__init__.py
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/panda_mlnode.py
@@ -6,6 +7,7 @@
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/vrdatapub.py
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/realtimepub_claude.py
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/model_weights.pth
+/home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/__pycache__/manual_joint_command.cpython-310.pyc
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/__pycache__/realtimepub.cpython-310.pyc
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/__pycache__/__init__.cpython-310.pyc
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/__pycache__/panda_mlnode.cpython-310.pyc
@@ -23,6 +25,7 @@
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control-0.0.0-py3.10.egg-info/entry_points.txt
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control-0.0.0-py3.10.egg-info/requires.txt
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/isaac_arm_ml_control/iiwa_pub_ml
+/home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/isaac_arm_ml_control/manual_joint_command
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/isaac_arm_ml_control/publisher_ml
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/isaac_arm_ml_control/publisher_test
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/isaac_arm_ml_control/realtimepub

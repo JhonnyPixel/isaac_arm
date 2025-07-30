@@ -30,7 +30,8 @@ setup(
             'iiwa_pub_ml=isaac_arm_ml_control.iiwa_mlnode:main',
             'vrdatapub=isaac_arm_ml_control.vrdatapub:main',
             'realtimepub=isaac_arm_ml_control.realtimepub:main',
-            'realtimepub_claude=isaac_arm_ml_control.realtimepub_claude:main'
+            'realtimepub_claude=isaac_arm_ml_control.realtimepub_claude:main',
+            'manual_joint_command=isaac_arm_ml_control.manual_joint_command:main'
         ],
     },
 )

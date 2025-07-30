@@ -11,6 +11,7 @@ setup.py
 ../../build/isaac_arm_ml_control/isaac_arm_ml_control.egg-info/zip-safe
 isaac_arm_ml_control/__init__.py
 isaac_arm_ml_control/iiwa_mlnode.py
+isaac_arm_ml_control/manual_joint_command.py
 isaac_arm_ml_control/model_weights.pth
 isaac_arm_ml_control/panda_mlnode.py
 isaac_arm_ml_control/publisher_test.py

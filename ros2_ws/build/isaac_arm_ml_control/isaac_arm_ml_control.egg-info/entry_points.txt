@@ -1,5 +1,6 @@
 [console_scripts]
 iiwa_pub_ml = isaac_arm_ml_control.iiwa_mlnode:main
+manual_joint_command = isaac_arm_ml_control.manual_joint_command:main
 publisher_ml = isaac_arm_ml_control.panda_mlnode:main
 publisher_test = isaac_arm_ml_control.publisher_test:main
 realtimepub = isaac_arm_ml_control.realtimepub:main

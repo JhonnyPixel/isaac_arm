@@ -16,6 +16,7 @@ isaac_arm_ml_control/model_weights.pth
 isaac_arm_ml_control/panda_mlnode.py
 isaac_arm_ml_control/publisher_test.py
 isaac_arm_ml_control/realtimepub.py
+isaac_arm_ml_control/realtimepub2.py
 isaac_arm_ml_control/realtimepub_claude.py
 isaac_arm_ml_control/vrdatapub.py
 resource/isaac_arm_ml_control

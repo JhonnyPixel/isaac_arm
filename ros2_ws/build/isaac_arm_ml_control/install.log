@@ -3,6 +3,7 @@
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/__init__.py
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/panda_mlnode.py
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/iiwa_mlnode.py
+/home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/realtimepub2.py
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/publisher_test.py
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/vrdatapub.py
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/realtimepub_claude.py
@@ -12,6 +13,7 @@
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/__pycache__/__init__.cpython-310.pyc
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/__pycache__/panda_mlnode.cpython-310.pyc
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/__pycache__/iiwa_mlnode.cpython-310.pyc
+/home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/__pycache__/realtimepub2.cpython-310.pyc
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/__pycache__/publisher_test.cpython-310.pyc
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/__pycache__/vrdatapub.cpython-310.pyc
 /home/francesco/Desktop/tirocinio/ros2_ws/install/isaac_arm_ml_control/lib/python3.10/site-packages/isaac_arm_ml_control/__pycache__/realtimepub_claude.cpython-310.pyc

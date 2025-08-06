@@ -1,0 +1,19 @@
+from omni.isaac.core.articulations import ArticulationBuilder
+
+builder = ArticulationBuilder(stage)
+
+# 1) Aggiungo il braccio importato via URDF
+builder.add_articulation("/World/iiwa_container/lbr_iiwa7_r800_01/base_link")
+
+# 2) Aggiungo la pinza importata come prim semplice
+builder.add_prim("/World/iiwa_container/lbr_iiwa7_r800_01/RobotiqGripper")
+
+# 3) Connetto i due link con un joint weld interno
+builder.add_fixed_joint(
+    parent_path="/World/iiwa_container/lbr_iiwa7_r800_01/link7",
+    child_path ="/World/iiwa_container/lbr_iiwa7_r800_01/RobotiqGripper/robotiq_base_link"
+)
+
+# 4) Ricostruisco l’Articulation unificato
+new_art = builder.build()
+

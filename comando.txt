@@ -1,0 +1,2 @@
+ros2 topic pub /joint_command sensor_msgs/JointState "{name: ['left_outer_finger_joint', 'right_outer_finger_joint'], position: [0.8, 0.8]}"
+

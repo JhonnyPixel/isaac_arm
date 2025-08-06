@@ -120,15 +120,14 @@ def cinematic(self,x,y,z,o):
         # 7. Esportazione dei dati in CSV
         joint_positions = sol.q
 
-        joint_msg = JointState()
-        joint_msg.header.stamp = self.get_clock().now().to_msg()
-        joint_msg.name = [
+        self.joint_msg = JointState()
+        self.joint_msg.header.stamp = self.get_clock().now().to_msg()
+        self.joint_msg.name = [
             'joint1', 'joint2', 'joint3',
             'joint4', 'joint5', 'joint6', 'joint7'
         ]
-        joint_msg.position = [float(j) for j in joint_positions]
+        self.joint_msg.position = [float(j) for j in joint_positions]
 
-        self.publisher_.publish(joint_msg)
         
         self.get_logger().info(
             f"Joint values: {', '.join([f'{j:.3f}' for j in joint_positions])}"
@@ -213,6 +212,13 @@ class VRDataLogger(Node):
                 f"{o.x:.6f}", f"{o.y:.6f}", f"{o.z:.6f}", f"{o.w:.6f}",
                 f"{grip:.6f}"
             ])
+            
+            self.joint_msg.name.append("left_inner_finger_joint")
+            self.joint_msg.name.append("right_inner_finger_joint")
+            self.joint_msg.position.append(float(grip))
+            self.joint_msg.position.append(float(grip))
+            self.publisher_.publish(self.joint_msg)
+        
         else:
             self.get_logger().info("La posizione desiderata non è raggiungibile.")
         self.csv_file_vr.flush()
